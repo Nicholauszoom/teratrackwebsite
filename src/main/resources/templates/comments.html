@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>TeraTrack-comments</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" type="image/png" href="/images/LOGOTERACONT.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets2/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets2/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets2/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="assets2/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="assets2/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets2/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets2/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: NiceAdmin - v2.2.2
+    * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+            <img src="/images/LOGOTERACONT.png" alt="">
+            <span class="d-none d-lg-block">TeraTrack</span>
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+        <form class="search-form d-flex align-items-center" method="POST" action="#">
+            <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+        </form>
+    </div><!-- End Search Bar -->
+
+
+
+</header><!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link " href="/tera-home-dashboard">
+                <i class="bi bi-grid"></i>
+                <span>Admin</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
+
+        <!--<li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
+          </a>-->
+        <!-- <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">-->
+        <!--<li class="nav-item">
+          <a href="/tera-home-dashboard">
+            <i class="bi bi-house-fill"></i><span>Home</span>
+          </a>
+        </li>-->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="/tera-home-dashboard">
+                <i class="bi bi-house-fill"></i>
+                <span>Home</span>
+            </a>
+        </li>
+        <!--  <li class="nav-item">
+            <a href="/adminViewComment">
+              <i class="bi bi-chat-left-dots-fill"></i><span>Comments</span>
+            </a>
+          </li>-->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="/adminViewComment">
+                <i class="bi bi-chat-left-dots-fill"></i>
+                <span>Comment</span>
+            </a>
+        </li>
+
+        <!-- <li>
+           <span class="nav-link" th:text="${messagesCount}">0</span>
+         </li>-->
+        <!--<li class="nav-item">
+          <a href="/logout">
+            <i class="bi bi-backspace-reverse-fill"></i><span>Logout</span>
+          </a>
+        </li>-->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="/logout">
+                <i class="bi bi-backspace-reverse-fill"></i>
+                <span>Logout</span>
+            </a>
+        </li>
+
+        <!-- </ul>-->
+        <!--</li>--><!-- End Components Nav -->
+
+    </ul>
+
+</aside><!-- End Sidebar-->
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Data Tables</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item">Tables</li>
+                <li class="breadcrumb-item active">Data</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Data</h5>
+                        <!-- <p>Added lightweight categories  <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>-->
+
+                        <!-- Table with stripped rows -->
+                        <table class="table datatable">
+                            <thead>
+                            <tr>
+                                <th scope="col">SN</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Country</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">message</th>
+                                <th scope="col">Time</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="comment, iStat : ${comment}">
+                                <th scope="row" th:text="${iStat.index + 1}">1</th>
+                                <td th:text="${comment.name}">Larry</td>
+                                <td th:text="${comment.phone}">Larry</td>
+                                <td th:text="${comment.country}">Larry</td>
+                                <td th:text="${comment.email}">Larry</td>
+                                <td th:text="${comment.message}">Larry</td>
+                                <td th:text="${comment.sendTime}">Larry</td>
+
+                                <td><a href="" th:href="@{/adminViewComment/delete/{id}(id=${comment.id})}" class="btn btn-danger">Delete</a></td>
+                               <!-- <td><a href="" th:href="@{/commentAdd/update/{id}(id=${comment.id})}" class="btn btn-warning">Update</a></td>-->
+
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!-- End Table with stripped rows -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+    <!-- <div class="copyright">
+       &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+     </div>-->
+    <!-- <div class="credits">
+         &lt;!&ndash; All the links in the footer should remain intact. &ndash;&gt;
+         &lt;!&ndash; You can delete the links only if you purchased the pro version. &ndash;&gt;
+         &lt;!&ndash; Licensing information: https://bootstrapmade.com/license/ &ndash;&gt;
+         &lt;!&ndash; Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ &ndash;&gt;
+         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+     </div>-->
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets2/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="assets2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets2/vendor/chart.js/chart.min.js"></script>
+<script src="assets2/vendor/echarts/echarts.min.js"></script>
+<script src="assets2/vendor/quill/quill.min.js"></script>
+<script src="assets2/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="assets2/vendor/tinymce/tinymce.min.js"></script>
+<script src="assets2/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets2/js/main.js"></script>
+
+</body>
+
+</html>

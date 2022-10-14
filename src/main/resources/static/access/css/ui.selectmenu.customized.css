@@ -1,0 +1,94 @@
+/* Selectmenu */
+.custom-select {
+	width: 100%;
+	width: calc(100% - 2px);
+}
+
+.ui-selectmenu {
+	display: inline-block; 
+	position: relative; 
+	overflow: hidden; 
+	border-radius: 0; 
+	border: none; 
+	background: #fff; 
+	border: 1px solid #dce6e8; 
+	text-decoration: none !important;
+}
+.ui-selectmenu .ui-selectmenu-icon {
+	position:absolute; 
+	top: 0px; 
+	right: 0px; 
+	width: 22px; 
+	bottom: 0px; 
+	background: none;
+	height: auto;
+}
+.ui-selectmenu .ui-selectmenu-icon:before {
+	display: inline-block;
+	position: absolute;
+	content: '';
+	left: 50%;
+	top: 50%;
+	margin-left: -5px;
+	margin-top: -2.5px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 5px 0 5px;
+	border-color: #cccccc transparent transparent transparent;
+}
+
+.ui-selectmenu-menu {
+	padding: 0; 
+	margin: 0; 
+	position: absolute; 
+	top: 0; 
+	display: none; 
+	z-index: 1005;
+}
+.ui-selectmenu-menu ul {
+	padding: 0; 
+	margin: 0; 
+	list-style: none; 
+	position: relative; 
+	overflow: auto; 
+	overflow-y: auto; 
+	overflow-x: hidden; 
+	-webkit-overflow-scrolling: touch; 
+	border: 1px solid #dce6e8; 
+	background: #fff; 
+	border-radius: 0; 
+	border-top: none; 
+	border-bottom: none;
+} 
+.ui-selectmenu-open {display: block;}
+.ui-selectmenu-menu li {
+	padding: 0; 
+	margin: 0; 
+	display: block; 
+	border: none !important; 
+	font-weight: normal !important; 
+	background: none !important;
+}
+.ui-selectmenu-menu li a,
+.ui-selectmenu-status {
+	display: block; 
+	padding: 3px 8px; 
+	padding-right: 26px; 
+	outline:none; 
+	text-decoration: none; 
+	color: inherit; 
+	font-weight: normal; 
+	color: #000; 
+	font-size: 13px; 
+	line-height: 23px;
+}
+.ui-selectmenu-menu li a {
+	border-bottom: 1px solid #dce6e8;
+}
+.ui-selectmenu-menu li a:hover, 
+.ui-selectmenu-menu .ui-state-hover a {
+	color: #000; 
+	background: #efefef !important; 
+	zoom: 1;
+}
