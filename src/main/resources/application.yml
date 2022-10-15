@@ -1,4 +1,4 @@
-server.port: 3032
+#server.port: 3032
 #server:
 #  error:
 #    include-message: always
